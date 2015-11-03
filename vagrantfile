@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.define "server" do |server|
         server.vm.provider "virtualbox" do |v|
-            v.gui = false 
+            v.gui = true
             v.name = "playground.server"
             v.customize ["modifyvm", :id, "--memory", "4096"]
             v.customize ["modifyvm", :id, "--cpus", "2"]
